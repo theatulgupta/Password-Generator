@@ -164,7 +164,7 @@ export default function App() {
           </Formik>
         </View>
         {isPassGenerated ? (
-          <View style={[styles.card, styles.elevatedCard]}>
+          <View style={[styles.card]}>
             <Text style={styles.subTitle}>Generated Password</Text>
             <Text style={styles.description}>Long Press to copy</Text>
             <Text selectable style={styles.generatedPassword}>{password}</Text>
@@ -177,20 +177,25 @@ export default function App() {
 
 const styles = StyleSheet.create({
   appContainer: {
-
   },
   formContainer: {
     padding: 20,
   },
   title: {
+    textTransform: 'uppercase',
     fontSize: 24,
     fontWeight: '800',
     marginBottom: 20,
-    color: '#FED85D',
+    color: '#FC80A5',
+    padding: 10,
+    alignSelf: 'center',
+    borderWidth: 1,
+    borderRadius: 4,
   },
   heading: {
     fontSize: 16,
     fontWeight: 'bold',
+    color: 'black',
   },
   inputWrapper: {
     flexDirection: 'row',
@@ -205,7 +210,7 @@ const styles = StyleSheet.create({
     height: 40,
     padding: 10,
     borderWidth: 1,
-    borderColor: 'white',
+    borderColor: '#C9A0DC',
     width: 100,
     borderRadius: 4,
 
@@ -234,18 +239,12 @@ const styles = StyleSheet.create({
     backgroundColor: '#FC80A5',
   },
   card: {
-    backgroundColor: 'white',
     margin: 10,
-    borderRadius: 4,
     padding: 10,
     alignItems: 'center',
-  },
-  elevatedCard: {
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 1,
-      height: 1,
-    },
+    borderWidth: 1,
+    borderRadius: 4,
+    borderColor: '#29ab87',
   },
   subTitle: {
     fontWeight: 'bold',
@@ -261,7 +260,7 @@ const styles = StyleSheet.create({
     paddingTop: 10,
     fontSize: 22,
     fontWeight: '700',
-    color: 'black',
+    color: '#FC80A5',
   },
 });
 
